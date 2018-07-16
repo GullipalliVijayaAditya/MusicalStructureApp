@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:weightSum="5"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:id="@+id/nowIsPlaying"
+            style="@style/MenuCategoryStyle"
+            android:background="@color/category_now_is_playing"
+            android:elevation="10dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/MenuCategoryIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/now_is_playing"
+                android:src="@drawable/ic_play_circle_outline_black_24dp" />
+
+            <TextView
+                style="@style/MenuCategoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/now_is_playing" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/albums"
+            style="@style/MenuCategoryStyle"
+            android:background="@color/category_albums"
+            android:layout_margin="5dp"
+            android:elevation="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/MenuCategoryIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/albums"
+                android:src="@drawable/ic_album_black_24dp" />
+
+            <TextView
+                style="@style/MenuCategoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/albums" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/artists"
+            style="@style/MenuCategoryStyle"
+            android:background="@color/category_artists"
+            android:layout_margin="5dp"
+            android:elevation="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/MenuCategoryIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/artist"
+                android:src="@drawable/ic_recent_actors_black_24dp" />
+
+            <TextView
+                style="@style/MenuCategoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/artist" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/musicStore"
+            style="@style/MenuCategoryStyle"
+            android:background="@color/category_music_store"
+            android:elevation="10dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/MenuCategoryIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/music_store"
+                android:src="@drawable/ic_shopping_basket_black_24dp" />
+
+            <TextView
+                style="@style/MenuCategoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/music_store" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/settings"
+            style="@style/MenuCategoryStyle"
+            android:background="@color/category_settings"
+            android:elevation="10dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/MenuCategoryIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/settings"
+                android:src="@drawable/ic_settings_input_composite_black_24dp" />
+
+            <TextView
+                style="@style/MenuCategoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/settings" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
