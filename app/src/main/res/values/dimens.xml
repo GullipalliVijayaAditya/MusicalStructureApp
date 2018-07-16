@@ -4,4 +4,24 @@
     <dimen name="size_title_of_album">16sp</dimen>
     <dimen name="size_title_of_song">16sp</dimen>
     <dimen name="size_of_name_current_song">18sp</dimen>
+    <dimen name="zerodp">0dp</dimen>
+    <dimen name="one">1</dimen>
+    <dimen name="five">5</dimen>
+    <dimen name="three">3</dimen>
+    <dimen name="eight">8</dimen>
+    <dimen name="ten">10</dimen>
+    <dimen name="twodp">2dp</dimen>
+    <dimen name="fivedp">5dp</dimen>
+    <dimen name="tendp">10dp</dimen>
+    <dimen name="fifteendp">15dp</dimen>
+    <dimen name="twentydp">20dp</dimen>
+    <dimen name="twentyfivedp">25dp</dimen>
+    <dimen name="thirtydp">30dp</dimen>
+    <dimen name="fiftydp">50dp</dimen>
+    <dimen name="hundreddp">100dp</dimen>
+    <dimen name="tensp">10sp</dimen>
+    <dimen name="fifteensp">15sp</dimen>
+    <dimen name="twentysp">20sp</dimen>
+    <dimen name="twopointnine">2.9</dimen>
+    <dimen name="zeropointfour">0.4</dimen>
 </resources>

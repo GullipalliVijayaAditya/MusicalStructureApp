@@ -87,6 +87,11 @@ public class Artist extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Function not implemented. Missing Intent for opening browser", Toast.LENGTH_SHORT).show();
             }
         });
-
+    }
+    @Override
+    public void onBackPressed() {
+        Intent intent=new Intent(this,MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

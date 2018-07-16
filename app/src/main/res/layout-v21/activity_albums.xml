@@ -10,48 +10,48 @@
         android:id="@+id/settingsTopMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="10dp"
         android:background="@color/primary_dark_color"
+        android:elevation="@dimen/tendp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/settingsMenuNowIsPlaying"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zerodp"
             android:layout_height="match_parent"
-            android:elevation="10dp"
-            android:layout_weight="1"
+            android:layout_weight="@dimen/one"
             android:backgroundTint="@color/category_now_is_playing"
+            android:elevation="@dimen/tendp"
             android:text="@string/now_is_playing_name"
             android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/settingsTopMenuSettings"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zerodp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:elevation="10dp"
+            android:layout_weight="@dimen/one"
             android:backgroundTint="@color/category_settings"
+            android:elevation="@dimen/tendp"
             android:text="@string/settings_name"
             android:textColor="@android:color/white" />
 
 
         <Button
             android:id="@+id/settingsMenuArtist"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zerodp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:elevation="10dp"
+            android:layout_weight="@dimen/one"
             android:backgroundTint="@color/category_artists"
+            android:elevation="@dimen/tendp"
             android:text="@string/artist_name"
             android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/settingsMenuMusicStore"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zerodp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:elevation="10dp"
+            android:layout_weight="@dimen/one"
             android:backgroundTint="@color/category_music_store"
+            android:elevation="@dimen/tendp"
             android:text="@string/music_store_name"
             android:textColor="@android:color/white" />
     </LinearLayout>
@@ -63,12 +63,12 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zerodp"
             android:layout_height="match_parent"
             android:layout_margin="@dimen/little_margin"
-            android:layout_weight="1"
-            android:elevation="20dp"
+            android:layout_weight="@dimen/one"
             android:background="@color/accent_color"
+            android:elevation="@dimen/twentydp"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -110,35 +110,33 @@
 
                     <ImageButton
                         android:id="@+id/addToPlayListAlbumOne"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/zerodp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:elevation="10dp"
+                        android:layout_weight="@dimen/one"
                         android:backgroundTint="@color/primary_color"
+                        android:elevation="@dimen/tendp"
                         android:src="@drawable/ic_playlist_add_white_18dp" />
 
                     <ImageButton
                         android:id="@+id/playAlbum1"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/zerodp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:elevation="10dp"
+                        android:layout_weight="@dimen/one"
                         android:backgroundTint="@color/primary_color"
+                        android:elevation="@dimen/tendp"
                         android:src="@drawable/ic_play_arrow_white_18dp" />
 
                 </LinearLayout>
-
             </LinearLayout>
-
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zerodp"
             android:layout_height="match_parent"
-            android:layout_margin="8dp"
-            android:layout_weight="1"
-            android:elevation="20dp"
+            android:layout_margin="@dimen/little_margin"
+            android:layout_weight="@dimen/one"
             android:background="@color/accent_color"
+            android:elevation="@dimen/twentydp"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -179,36 +177,33 @@
 
                     <ImageButton
                         android:id="@+id/addToPlayListAlbumTwo"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/zerodp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:elevation="10dp"
+                        android:layout_weight="@dimen/one"
                         android:backgroundTint="@color/primary_color"
+                        android:elevation="@dimen/tendp"
                         android:src="@drawable/ic_playlist_add_white_18dp" />
 
                     <ImageButton
                         android:id="@+id/playAlbum2"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/zerodp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:elevation="10dp"
+                        android:layout_weight="@dimen/one"
                         android:backgroundTint="@color/primary_color"
+                        android:elevation="@dimen/tendp"
                         android:src="@drawable/ic_play_arrow_white_18dp" />
 
                 </LinearLayout>
-
             </LinearLayout>
-
         </LinearLayout>
-
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="18dp"
-        android:textSize="15sp"
+        android:layout_margin="@dimen/twentydp"
+        android:text="@string/albums_screen_description"
         android:textColor="@android:color/black"
-        android:text="@string/albums_screen_description" />
+        android:textSize="@dimen/fifteensp" />
 
 </LinearLayout>

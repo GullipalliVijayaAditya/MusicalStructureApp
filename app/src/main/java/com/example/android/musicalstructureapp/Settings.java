@@ -86,7 +86,12 @@ public class Settings extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), R.string.settings_login_message, Toast.LENGTH_SHORT).show();
             }
         });
+    }
 
-
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -8,8 +8,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.example.android.musicalstructureapp.R;
-
 public class Albums extends AppCompatActivity {
 
     @Override
@@ -95,6 +93,13 @@ public class Albums extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Album has been added to playlist", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+    @Override
+    public void onBackPressed() {
+        Intent intent=new Intent(this,MainActivity.class);
+        startActivity(intent);
+        finish();
+
 
     }
 }

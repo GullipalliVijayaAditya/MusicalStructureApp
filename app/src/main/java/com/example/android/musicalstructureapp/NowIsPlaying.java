@@ -105,6 +105,11 @@ public class NowIsPlaying extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "You decided buy this song. Thank you.", Toast.LENGTH_SHORT).show();
             }
         });
-
+    }
+    @Override
+    public void onBackPressed() {
+        Intent intent=new Intent(this,MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -15,47 +15,47 @@
 
         <Button
             android:id="@+id/settingsMenuNowIsPlaying"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zerodp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:elevation="10dp"
-            android:textStyle="bold"
+            android:layout_weight="@dimen/one"
             android:backgroundTint="@color/category_now_is_playing"
+            android:elevation="@dimen/tendp"
             android:text="@string/now_is_playing_name"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/settingsMenuAlbums"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zerodp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:elevation="10dp"
-            android:textStyle="bold"
+            android:layout_weight="@dimen/one"
             android:backgroundTint="@color/category_albums"
+            android:elevation="@dimen/tendp"
             android:text="@string/albums_name"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/settingsMenuArtist"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zerodp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:elevation="10dp"
-            android:textStyle="bold"
+            android:layout_weight="@dimen/one"
             android:backgroundTint="@color/category_artists"
+            android:elevation="@dimen/tendp"
             android:text="@string/artist_name"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/settingsTopMenuSettings"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zerodp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:elevation="10dp"
-            android:textStyle="bold"
+            android:layout_weight="@dimen/one"
             android:backgroundTint="@color/category_settings"
+            android:elevation="@dimen/tendp"
             android:text="@string/settings_name"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -72,8 +72,8 @@
             <SearchView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:elevation="5dp"
+                android:layout_margin="@dimen/twodp"
+                android:elevation="@dimen/fivedp"
                 android:queryHint="Enter the search criteria" />
 
 
@@ -84,10 +84,10 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/zerodp"
                     android:layout_height="match_parent"
                     android:layout_margin="@dimen/little_margin"
-                    android:layout_weight="1"
+                    android:layout_weight="@dimen/one"
                     android:background="@color/accent_color"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -97,7 +97,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/little_margin"
-                        android:elevation="10dp"
+                        android:elevation="@dimen/tendp"
                         android:src="@drawable/awolnationcover" />
 
                     <LinearLayout
@@ -113,8 +113,8 @@
                             style="@style/NameOfBand"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="@android:color/black"
-                            android:text="@string/awolnation_band_name" />
+                            android:text="@string/awolnation_band_name"
+                            android:textColor="@android:color/black" />
 
                         <TextView
                             style="@style/TitleOfAlbum"
@@ -130,34 +130,31 @@
 
                             <ImageButton
                                 android:id="@+id/infoAlbum1"
-                                android:layout_width="0dp"
+                                android:layout_width="@dimen/zerodp"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:elevation="10dp"
+                                android:layout_weight="@dimen/one"
                                 android:backgroundTint="@color/primary_color"
+                                android:elevation="@dimen/tendp"
                                 android:src="@drawable/ic_info_outline_white_18dp" />
 
                             <ImageButton
                                 android:id="@+id/addToShoppingCartAlbum1"
-                                android:layout_width="0dp"
+                                android:layout_width="@dimen/zerodp"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:elevation="10dp"
+                                android:layout_weight="@dimen/one"
                                 android:backgroundTint="@color/primary_color"
+                                android:elevation="@dimen/tendp"
                                 android:src="@drawable/ic_shopping_cart_white_18dp" />
 
                         </LinearLayout>
-
                     </LinearLayout>
-
-
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/zerodp"
                     android:layout_height="match_parent"
                     android:layout_margin="@dimen/little_margin"
-                    android:layout_weight="1"
+                    android:layout_weight="@dimen/one"
                     android:background="@color/accent_color"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -166,8 +163,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/little_margin"
-                        android:elevation="10dp"
-
+                        android:elevation="@dimen/tendp"
                         android:src="@drawable/abneypark" />
 
                     <LinearLayout
@@ -183,8 +179,8 @@
                             style="@style/NameOfBand"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@android:color/black"
-                            android:text="@string/abney_park_band_name" />
+                            android:text="@string/abney_park_band_name"
+                            android:textColor="@android:color/black" />
 
                         <TextView
                             style="@style/TitleOfAlbum"
@@ -200,20 +196,20 @@
 
                             <ImageButton
                                 android:id="@+id/infoAlbum2"
-                                android:layout_width="0dp"
+                                android:layout_width="@dimen/zerodp"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:elevation="10dp"
+                                android:layout_weight="@dimen/one"
                                 android:backgroundTint="@color/primary_color"
+                                android:elevation="@dimen/tendp"
                                 android:src="@drawable/ic_info_outline_white_18dp" />
 
                             <ImageButton
                                 android:id="@+id/addToShoppingCartAlbum2"
-                                android:layout_width="0dp"
+                                android:layout_width="@dimen/zerodp"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:elevation="10dp"
+                                android:layout_weight="@dimen/one"
                                 android:backgroundTint="@color/primary_color"
+                                android:elevation="@dimen/tendp"
                                 android:src="@drawable/ic_shopping_cart_white_18dp" />
 
                         </LinearLayout>
@@ -231,10 +227,10 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/zerodp"
                     android:layout_height="match_parent"
                     android:layout_margin="@dimen/little_margin"
-                    android:layout_weight="1"
+                    android:layout_weight="@dimen/one"
                     android:background="@color/accent_color"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -244,7 +240,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/little_margin"
-                        android:elevation="10dp"
+                        android:elevation="@dimen/tendp"
                         android:src="@drawable/examplecover" />
 
                     <LinearLayout
@@ -260,8 +256,8 @@
                             style="@style/NameOfBand"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="@android:color/black"
-                            android:text="@string/example_band_name" />
+                            android:text="@string/example_band_name"
+                            android:textColor="@android:color/black" />
 
                         <TextView
                             style="@style/TitleOfAlbum"
@@ -277,20 +273,20 @@
 
                             <ImageButton
                                 android:id="@+id/infoAlbum3"
-                                android:layout_width="0dp"
+                                android:layout_width="@dimen/zerodp"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:elevation="10dp"
+                                android:layout_weight="@dimen/one"
                                 android:backgroundTint="@color/primary_color"
+                                android:elevation="@dimen/tendp"
                                 android:src="@drawable/ic_info_outline_white_18dp" />
 
                             <ImageButton
                                 android:id="@+id/addToShoppingCartAlbum3"
-                                android:layout_width="0dp"
+                                android:layout_width="@dimen/zerodp"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:elevation="10dp"
+                                android:layout_weight="@dimen/one"
                                 android:backgroundTint="@color/primary_color"
+                                android:elevation="@dimen/tendp"
                                 android:src="@drawable/ic_shopping_cart_white_18dp" />
 
                         </LinearLayout>
@@ -301,10 +297,10 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/zerodp"
                     android:layout_height="match_parent"
                     android:layout_margin="@dimen/little_margin"
-                    android:layout_weight="1"
+                    android:layout_weight="@dimen/one"
                     android:background="@color/accent_color"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -313,7 +309,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/little_margin"
-                        android:elevation="10dp"
+                        android:elevation="@dimen/tendp"
                         android:src="@drawable/tiestocover" />
 
                     <LinearLayout
@@ -329,8 +325,8 @@
                             style="@style/NameOfBand"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                             android:textColor="@android:color/black"
-                            android:text="@string/tiesto_band_name" />
+                            android:text="@string/tiesto_band_name"
+                            android:textColor="@android:color/black" />
 
                         <TextView
                             style="@style/TitleOfAlbum"
@@ -346,20 +342,20 @@
 
                             <ImageButton
                                 android:id="@+id/infoAlbum4"
-                                android:layout_width="0dp"
+                                android:layout_width="@dimen/zerodp"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:elevation="10dp"
+                                android:layout_weight="@dimen/one"
                                 android:backgroundTint="@color/primary_color"
+                                android:elevation="@dimen/tendp"
                                 android:src="@drawable/ic_info_outline_white_18dp" />
 
                             <ImageButton
                                 android:id="@+id/addToShoppingCartAlbum4"
-                                android:layout_width="0dp"
+                                android:layout_width="@dimen/zerodp"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:elevation="10dp"
+                                android:layout_weight="@dimen/one"
                                 android:backgroundTint="@color/primary_color"
+                                android:elevation="@dimen/tendp"
                                 android:src="@drawable/ic_shopping_cart_white_18dp" />
 
                         </LinearLayout>
@@ -373,11 +369,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fivedp"
                 android:background="@android:color/white"
+                android:text="@string/music_store_screen_description"
                 android:textColor="@android:color/black"
-                android:textSize="15sp"
-                android:layout_margin="5dp"
-                android:text="@string/music_store_screen_description" />
+                android:textSize="@dimen/fifteensp" />
 
         </LinearLayout>
 
