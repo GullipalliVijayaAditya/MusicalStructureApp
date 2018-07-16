@@ -99,7 +99,5 @@ public class Albums extends AppCompatActivity {
         Intent intent=new Intent(this,MainActivity.class);
         startActivity(intent);
         finish();
-
-
     }
 }
