@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxHeight="10dp">
+
+    <RelativeLayout
+        android:id="@+id/genre_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/genre_title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            android:textSize="@dimen/text_title_18"
+            tools:text="Folk Rock" />
+
+        <ImageView
+            android:id="@+id/genre_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/genre_title_text"
+            android:contentDescription="@string/genre_img"
+            android:src="@drawable/genre_img" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

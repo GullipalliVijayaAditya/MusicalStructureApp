@@ -1,0 +1,59 @@
+package com.example.android.musicalstructureapp;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import com.example.android.musicalstructureapp.adapter.SongAdapter;
+import com.example.android.musicalstructureapp.model.Genre;
+import com.example.android.musicalstructureapp.model.Song;
+import com.example.android.musicalstructureapp.util.Util;
+
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+public class GenreActivity extends AppCompatActivity {
+
+    @BindView(R.id.songs_img)
+    ImageView imageView;
+
+    @BindView(R.id.songs_title)
+    TextView titleText;
+
+    @BindView(R.id.songs_list_view)
+    ListView listView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.songs_layout);
+
+        ButterKnife.bind(this);
+
+        Long genreId = getIntent().getLongExtra("genre_id", 0);
+
+        Genre genre = Util.getGenreById(genreId);
+
+        imageView.setImageResource(R.drawable.genre_img);
+
+        titleText.setText(genre.getName());
+        List<Song> songList = Util.getSongsByGenre(genreId);
+
+        SongAdapter adapter = new SongAdapter(this, songList);
+
+        listView.setAdapter(adapter);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+            getSupportActionBar().setDisplayShowTitleEnabled(true);
+        }
+    }
+}

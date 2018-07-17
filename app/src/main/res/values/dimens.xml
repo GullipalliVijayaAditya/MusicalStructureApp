@@ -1,27 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="little_margin">8dp</dimen>
-    <dimen name="size_title_of_album">16sp</dimen>
-    <dimen name="size_title_of_song">16sp</dimen>
-    <dimen name="size_of_name_current_song">18sp</dimen>
-    <dimen name="zerodp">0dp</dimen>
-    <dimen name="one">1</dimen>
-    <dimen name="five">5</dimen>
-    <dimen name="three">3</dimen>
-    <dimen name="eight">8</dimen>
-    <dimen name="ten">10</dimen>
-    <dimen name="twodp">2dp</dimen>
-    <dimen name="fivedp">5dp</dimen>
-    <dimen name="tendp">10dp</dimen>
-    <dimen name="fifteendp">15dp</dimen>
-    <dimen name="twentydp">20dp</dimen>
-    <dimen name="twentyfivedp">25dp</dimen>
-    <dimen name="thirtydp">30dp</dimen>
-    <dimen name="fiftydp">50dp</dimen>
-    <dimen name="hundreddp">100dp</dimen>
-    <dimen name="tensp">10sp</dimen>
-    <dimen name="fifteensp">15sp</dimen>
-    <dimen name="twentysp">20sp</dimen>
-    <dimen name="twopointnine">2.9</dimen>
-    <dimen name="zeropointfour">0.4</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="elevation_6">6dp</dimen>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_6">6dp</dimen>
+
+    <dimen name="song_height">200dp</dimen>
+
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_4">4dp</dimen>
+
+    <dimen name="text_title_18">18sp</dimen>
+    <dimen name="text_subtitle_14">14sp</dimen>
+    <dimen name="text_normal_12">12sp</dimen>
+    <dimen name="text_large_16">16sp</dimen>
+
+    <dimen name="list_divider_10">10dp</dimen>
 </resources>

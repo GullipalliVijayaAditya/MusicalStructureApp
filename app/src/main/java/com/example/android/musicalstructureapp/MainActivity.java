@@ -1,87 +1,104 @@
 package com.example.android.musicalstructureapp;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.Toast;
+import android.widget.TextView;
+
+import com.example.android.musicalstructureapp.R;
+import com.example.android.musicalstructureapp.model.Song;
+import com.example.android.musicalstructureapp.util.NowPlaying;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
+
+    @BindView(R.id.tab_layout)
+    TabLayout tabLayout;
+
+    @BindView(R.id.view_pager)
+    ViewPager viewPager;
+
+    @BindView(R.id.now_playing_layout)
+    LinearLayout nowPlayingLayout;
+    @BindView(R.id.now_playing_text)
+    TextView nowPlayingText;
+    @BindView(R.id.now_playing_btn)
+    Button nowPlayingButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Find the Layout that shows the Now Is Playing category
-        LinearLayout nowIsPlaying = (LinearLayout) findViewById(R.id.nowIsPlaying);
-        LinearLayout albums = (LinearLayout) findViewById(R.id.albums);
-        LinearLayout artists = (LinearLayout) findViewById(R.id.artists);
-        LinearLayout musicStore = (LinearLayout) findViewById(R.id.musicStore);
-        LinearLayout settings = (LinearLayout) findViewById(R.id.settings);
-
-        nowIsPlaying.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent nowIsPlayingIntent = new Intent(MainActivity.this, com.example.android.musicalstructureapp.NowIsPlaying.class);
-                startActivity(nowIsPlayingIntent);
-            }
-        });
-
-        albums.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent albumsIntent = new Intent(MainActivity.this, Albums.class);
-                startActivity(albumsIntent);
-            }
-        });
-
-        artists.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent artistsIntent = new Intent(MainActivity.this, Artist.class);
-                startActivity(artistsIntent);
-            }
-        });
-
-        musicStore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent musicStoreIntent = new Intent(MainActivity.this, com.example.android.musicalstructureapp.MusicStore.class);
-                startActivity(musicStoreIntent);
-            }
-        });
-
-        settings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent settingsIntent = new Intent(MainActivity.this, Settings.class);
-                startActivity(settingsIntent);
-            }
-        });
+        ButterKnife.bind(this);
+        setup();
     }
 
-    private Boolean exit = false;
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        refreshNowPlaying();
+    }
 
-    public void onBackPressed() {
-        if (exit) {
-            finish(); // finish activity
+    private void setup() {
+
+        nowPlayingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NowPlaying.INSTANCE.switchPaused();
+                refreshNowPlaying();
+            }
+        });
+
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.artists_fragment));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.albums_fragment));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.songs_fragment));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.genres_fragment));
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+
+        PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+        viewPager.setAdapter(adapter);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+    }
+
+    public void refreshNowPlaying() {
+        Song playing = NowPlaying.INSTANCE.getSong();
+        if (playing == null) {
+            nowPlayingLayout.setVisibility(View.GONE);
         } else {
-            Toast.makeText(this, "Press Back again to Exit.", Toast.LENGTH_SHORT).show();
-            exit = true;
-            new Handler().postDelayed(new Runnable() {
-
-                @Override
-                public void run() {
-                    // TODO Auto-generated method stub
-                    Intent a = new Intent(Intent.ACTION_MAIN);
-                    a.addCategory(Intent.CATEGORY_HOME);
-                    a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(a);
-                }
-            }, 1000);
+            nowPlayingLayout.setVisibility(View.VISIBLE);
+            Boolean paused = NowPlaying.INSTANCE.getPaused();
+            String buttonIcon = paused ? getString(R.string.play) : getString(R.string.pause);
+            String artist = playing.getArtist() != null ? playing.getArtist().getName() : "Unknown Artist";
+            String playingText = paused ? getString(R.string.paused, artist, playing.getName()) : getString(R.string.playing, artist, playing.getName());
+            nowPlayingText.setText(playingText);
+            nowPlayingButton.setText(buttonIcon);
+            nowPlayingText.setSelected(!paused);
         }
     }
 }
