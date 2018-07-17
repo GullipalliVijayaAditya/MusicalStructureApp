@@ -30,6 +30,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/fiftydp"
-            android:src="@drawable/udacity_logo" />
+            android:src="@drawable/udacity" />
     </LinearLayout>
 </LinearLayout>
