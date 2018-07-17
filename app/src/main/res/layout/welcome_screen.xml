@@ -32,6 +32,4 @@
             android:paddingTop="@dimen/fiftydp"
             android:src="@drawable/udacity_logo" />
     </LinearLayout>
-
-
 </LinearLayout>

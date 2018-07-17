@@ -2,9 +2,11 @@ package com.example.android.musicalstructureapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -59,5 +61,27 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(settingsIntent);
             }
         });
+    }
+
+    private Boolean exit = false;
+
+    public void onBackPressed() {
+        if (exit) {
+            finish(); // finish activity
+        } else {
+            Toast.makeText(this, "Press Back again to Exit.", Toast.LENGTH_SHORT).show();
+            exit = true;
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    // TODO Auto-generated method stub
+                    Intent a = new Intent(Intent.ACTION_MAIN);
+                    a.addCategory(Intent.CATEGORY_HOME);
+                    a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(a);
+                }
+            }, 1000);
+        }
     }
 }
