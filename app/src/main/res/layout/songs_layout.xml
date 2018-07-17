@@ -14,6 +14,7 @@
         android:id="@+id/songs_img"
         android:layout_width="match_parent"
         android:layout_height="@dimen/song_height"
+        android:layout_margin="@dimen/margin_4"
         android:contentDescription="@string/song_img"
         android:scaleType="centerCrop"
         tools:src="@drawable/mumford" />
@@ -22,6 +23,7 @@
         android:id="@+id/songs_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_4"
         android:background="@color/colorPrimaryDark"
         android:gravity="center"
         android:padding="@dimen/padding_10"

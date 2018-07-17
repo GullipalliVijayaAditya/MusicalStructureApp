@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="12dp"
+    android:padding="@dimen/padding_10"
     tools:context=".TabFragmentSongs">
 
     <ListView
@@ -11,6 +11,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="@android:color/transparent"
-        android:dividerHeight="10dp" />
-
+        android:dividerHeight="@dimen/list_divider_10" />
 </FrameLayout>

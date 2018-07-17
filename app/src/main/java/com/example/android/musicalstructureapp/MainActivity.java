@@ -1,5 +1,6 @@
 package com.example.android.musicalstructureapp;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -95,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
             Boolean paused = NowPlaying.INSTANCE.getPaused();
             String buttonIcon = paused ? getString(R.string.play) : getString(R.string.pause);
             String artist = playing.getArtist() != null ? playing.getArtist().getName() : "Unknown Artist";
-            String playingText = paused ? getString(R.string.paused, artist, playing.getName()) : getString(R.string.playing, artist, playing.getName());
+            @SuppressLint({"StringFormatInvalid", "LocalSuppress"}) String playingText = paused ? getString(R.string.paused, artist, playing.getName()) : getString(R.string.playing, artist, playing.getName());
             nowPlayingText.setText(playingText);
             nowPlayingButton.setText(buttonIcon);
             nowPlayingText.setSelected(!paused);
